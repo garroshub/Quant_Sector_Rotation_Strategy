@@ -178,7 +178,7 @@ if st.sidebar.button('🚀 Run Backtest'):
                         st.error("❌ No results generated. Please check the parameters and try again.")
                     else:
                         # Strategy Analysis Section
-                        st.subheader("📊 Trading Strategy Performance Analysis (LLM Agent)")
+                        st.subheader("📊 LLM Strategist Review")
                         analyses = agent.analyze_all_windows(results, data)
                         
                         for analysis in analyses:
