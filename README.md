@@ -2,9 +2,14 @@
 
 A sophisticated quantitative trading strategy leveraging momentum and volatility signals for ETF sector rotation, enhanced with LLM-powered strategy analysis.
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-red)
-![License](https://img.shields.io/badge/License-MIT-green)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-red)](https://streamlit.io/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://quantrotation.streamlit.app/)
+
+## 🚀 Try It Now!
+
+Experience the strategy in action: [Quant Sector Rotation App](https://quantrotation.streamlit.app/)
 
 ## 🚀 Strategy Overview
 
