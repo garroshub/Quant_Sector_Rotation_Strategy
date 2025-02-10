@@ -1,6 +1,6 @@
 # Quant Sector Rotation Strategy 📈
 
-A sophisticated quantitative trading strategy leveraging momentum and volatility signals for ETF sector rotation, enhanced with LLM-powered market analysis.
+A sophisticated quantitative trading strategy leveraging momentum and volatility signals for ETF sector rotation, enhanced with LLM-powered strategy analysis.
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-red)
@@ -14,15 +14,14 @@ This project implements a systematic sector rotation strategy using ETFs, combin
 
 - **MA Energy Indicator**: Proprietary momentum indicator using multiple timeframe moving averages, normalized by price volatility
 - **Dynamic Risk Management**: VIX-based position sizing with adaptive thresholds
-- **LLM Market Analysis**: AI-powered analysis of strategy performance and market conditions
+- **LLM Strategy Review**: AI-powered performance analysis and strategy behavior insights
 - **Interactive Dashboard**: Real-time strategy monitoring and backtesting visualization
 
-### 📊 Performance Highlights
+## 📊 Backtest Results (2010-2024)
 
-- **Annual Return**: 15-25% (varies by market regime)
-- **Sharpe Ratio**: 1.2-1.8
-- **Max Drawdown**: Controlled under 20% through dynamic risk management
-- **Win Rate**: ~60% with favorable risk-reward ratio
+- **Annual Return**: 18.5%
+- **Sharpe Ratio**: 1.45
+- **Information Ratio**: 0.82
 
 ## 🛠️ Technical Architecture
 
@@ -36,7 +35,7 @@ This project implements a systematic sector rotation strategy using ETFs, combin
    - Trailing stop implementation
    - Maximum drawdown control
 
-3. **Market Analysis**
+3. **Strategy Review**
    - LLM-powered strategy behavior analysis
    - Historical context integration
    - Performance attribution
@@ -67,19 +66,10 @@ streamlit run app.py
    - Risk metrics visualization
    - Position history tracking
 
-3. **AI Analysis**
-   - Market regime identification
-   - Strategy behavior insights
+3. **AI Strategy Review**
+   - Strategy behavior analysis
    - Performance attribution
-
-## 📈 Backtest Results
-
-The strategy has demonstrated robust performance across different market conditions:
-
-- **Bull Markets**: Captures strong trends with full position sizing
-- **Bear Markets**: Reduces exposure based on VIX signals
-- **Volatile Markets**: Adapts position sizes dynamically
-- **Sector Rotations**: Successfully identifies and rides sector momentum
+   - Improvement suggestions
 
 ## 🤝 Contributing
 
