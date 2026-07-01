@@ -59,6 +59,22 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+## AI Strategy Review Configuration
+
+The AI strategy review is optional. To enable it, set a Gemini API key in your runtime environment:
+
+```bash
+export GOOGLE_API_KEY="your_gemini_api_key_here"
+```
+
+On Windows PowerShell:
+
+```powershell
+$env:GOOGLE_API_KEY="your_gemini_api_key_here"
+```
+
+Do not commit real API keys to the repository. If no key is configured, the dashboard still runs and the AI review panel reports that the feature is disabled.
+
 ## 📊 Dashboard Features
 
 1. **Strategy Parameters**

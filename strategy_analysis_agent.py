@@ -3,9 +3,9 @@ import google.generativeai as genai
 from datetime import datetime
 import pandas as pd
 
-# Configure the Google API
-GOOGLE_API_KEY = "GOOGLE_API_KEY_REMOVED"
-genai.configure(api_key=GOOGLE_API_KEY)
+def _get_google_api_key():
+    """Return the configured Gemini API key, if one is available."""
+    return os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY")
 
 # Set up the model
 generation_config = {
@@ -22,11 +22,17 @@ safety_settings = [
     {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_MEDIUM_AND_ABOVE"},
 ]
 
-model = genai.GenerativeModel(
-    model_name="gemini-pro",
-    generation_config=generation_config,
-    safety_settings=safety_settings
-)
+def _build_model():
+    api_key = _get_google_api_key()
+    if not api_key:
+        return None
+
+    genai.configure(api_key=api_key)
+    return genai.GenerativeModel(
+        model_name="gemini-pro",
+        generation_config=generation_config,
+        safety_settings=safety_settings
+    )
 
 def analyze_trading_window(window_data, vix_data):
     """
@@ -39,6 +45,12 @@ def analyze_trading_window(window_data, vix_data):
     Returns:
         str: Structured analysis of strategy performance and market conditions
     """
+    model = _build_model()
+    if model is None:
+        return (
+            "AI strategy review is disabled because no Gemini API key is configured. "
+            "Set GOOGLE_API_KEY or GEMINI_API_KEY in the runtime environment to enable this feature."
+        )
     
     # Format the analysis prompt
     prompt = f"""
